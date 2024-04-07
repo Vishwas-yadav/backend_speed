@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Replace this MongoDB Atlas connection string with your actual connection string
-const mongoURI = 'mongodb+srv://contactvishwasyadav:SATFgCUmcVnUs9Xz@cluster0.6tggl6i.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+
 
 // Connect to MongoDB Atlas
 mongoose.connect(mongoURI, {
