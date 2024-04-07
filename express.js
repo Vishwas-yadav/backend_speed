@@ -47,6 +47,7 @@ const SpeedingEvent = mongoose.model('SpeedingEvent', speedingEventSchema);
 
 // Endpoint to receive speeding vehicle details including name, phone, vehicle type, vehicle number, and speed
 app.post('/api/speedexceedlimit', async (req, res) => {
+  console.log("req.body:::>>>",req.body);
   const { name, phone, vehicleType, vehicleNo, speed } = req.body; // Include 'speed' in request body
   const timestamp = new Date();
   const speedingEvent = new SpeedingEvent({ name, phone, vehicleType, vehicleNo, speed, timestamp }); // Include 'speed' in the object
